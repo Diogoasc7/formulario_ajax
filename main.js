@@ -37,3 +37,17 @@ $(document).ready(function() {
         })
     })
 })
+
+/*
+O código em JavaScript puro
+
+Utiliza XMLHttpRequest para fazer a requisição.
+Apenas envia a requisição, mas não trata a resposta.
+Não possui efeitos visuais, como carregamento do botão.
+O código em jQuery
+
+Usa jQuery Mask Plugin para formatar o CEP automaticamente.
+Faz a requisição AJAX de forma mais simplificada com $.ajax().
+Atualiza o campo de endereço com os dados retornados pela API.
+Modifica a interface do botão enquanto os dados são carregados.
+*/
