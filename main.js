@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 */
 
-// MONTAGEM AJAX COM JQUERY
+/* 
+MONTAGEM AJAX COM JQUERY
 $(document).ready(function() {
     $('#cep').mask('00000-000')
 
@@ -39,15 +40,16 @@ $(document).ready(function() {
         })
     })
 })
+*/
 
-/*
-MONTAGEM E TRATAMENTO DE ERRO COM JAVASCRIPT PURO
+
+// MONTAGEM E TRATAMENTO DE ERRO COM JAVASCRIPT PURO
 $(document).ready(function() {
     $('#cep').mask('00000-000')
 
     $('#btn-buscar-cep').click(function() {
         const cep = $('#cep').val();
-        const endpoint = `https://viacep.com.br/ws/${cep}/json/resultado`;
+        const endpoint = `https://viacep.com.br/ws/${cep}/json`;
         const botao = $(this); 
         $(botao).find('i').addClass('d-none');
         $(botao).find('span').removeClass('d-none');
@@ -73,8 +75,14 @@ $(document).ready(function() {
             }, 1000);
         })
     })
+    $('#formulario-pedido').submit(function(evento){
+        evento.preventDefault();
+        if ($('#nome').val().length == 0) {
+            throw new Error ('Digite o nome.');
+        }
+    })
 })
-*/
+
 
 /*
 O código em JavaScript puro
